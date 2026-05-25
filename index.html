@@ -12,7 +12,6 @@
   .api-box{background:#f1f0eb;border-radius:12px;border:1px solid #e0dfd8;padding:16px;margin-bottom:16px}
   .api-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
   .api-row input{flex:1;min-width:200px;padding:9px 12px;border:1px solid #d0cfc8;border-radius:8px;font-size:13px;font-family:monospace;background:#fff}
-  .api-row input:focus{outline:2px solid #378ADD;border-color:transparent}
   .log{font-size:12px;color:#555;font-family:monospace;background:#e8e7e0;padding:8px 10px;border-radius:8px;min-height:24px;word-break:break-all}
   .log.ok{background:#d4edda;color:#155724}
   .log.err{background:#f8d7da;color:#721c24}
@@ -20,19 +19,19 @@
   .voice-row{display:none;align-items:center;gap:8px;flex-wrap:wrap;font-size:13px;color:#555;margin-top:10px}
   .voice-row select{font-size:13px;border:1px solid #d0cfc8;border-radius:8px;padding:5px 8px;background:#fff}
   .tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
-  .tab{padding:8px 20px;border-radius:8px;border:1px solid #d0cfc8;background:transparent;font-size:14px;cursor:pointer;color:#555;transition:all .15s}
+  .tab{padding:8px 18px;border-radius:8px;border:1px solid #d0cfc8;background:transparent;font-size:14px;cursor:pointer;color:#555;transition:all .15s}
   .tab.active,.tab:hover{background:#fff;color:#1a1a1a;border-color:#aaa;font-weight:500}
   .section{display:none}.section.active{display:block}
-  .filter-row{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+  .filter-row{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}
   .filter-row select{font-size:13px;border:1px solid #d0cfc8;border-radius:8px;padding:5px 10px;background:#fff}
   .pw{width:100%;height:6px;background:#e0dfd8;border-radius:3px;overflow:hidden;margin-bottom:5px}
   .pb{height:100%;background:#378ADD;border-radius:3px;transition:width .3s}
   .pl{font-size:12px;color:#888;text-align:right;margin-bottom:12px}
   .flashcard{width:100%;min-height:180px;background:#fff;border-radius:14px;border:1px solid #e0dfd8;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;text-align:center;cursor:pointer;transition:background .15s;user-select:none;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
   .flashcard:hover{background:#f9f9f7}
-  .fc-es{font-size:32px;font-weight:600;margin-bottom:8px}
+  .fc-es{font-size:26px;font-weight:600;margin-bottom:8px;line-height:1.3}
   .fc-hint{font-size:14px;color:#888}
-  .fc-sv{font-size:22px;color:#185FA5;font-weight:500;margin-top:10px}
+  .fc-sv{font-size:18px;color:#185FA5;font-weight:500;margin-top:10px;line-height:1.4}
   .btn-row{display:flex;gap:8px;justify-content:center;margin-top:12px;flex-wrap:wrap}
   button.btn{background:#fff;border:1px solid #d0cfc8;border-radius:8px;padding:9px 18px;font-size:14px;cursor:pointer;color:#1a1a1a;transition:all .15s}
   button.btn:hover{background:#f1f0eb;border-color:#aaa}
@@ -41,33 +40,46 @@
   button.btn.bad{border-color:#dc3545;color:#721c24;background:#f8d7da}
   button.btn.audio{border-color:#378ADD;color:#185FA5}
   button.btn.audio.playing{background:#d0e8f8}
-  .qq{font-size:22px;font-weight:600;text-align:center}
+  button.btn.primary{background:#378ADD;color:#fff;border-color:#378ADD}
+  button.btn.primary:hover{background:#2266a8}
+  .qq{font-size:20px;font-weight:600;text-align:center;line-height:1.3}
   .qg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
-  .qo{padding:12px;border-radius:8px;border:1px solid #d0cfc8;background:#fff;font-size:15px;cursor:pointer;color:#1a1a1a;text-align:center;transition:all .15s}
+  .qo{padding:12px;border-radius:8px;border:1px solid #d0cfc8;background:#fff;font-size:14px;cursor:pointer;color:#1a1a1a;text-align:center;transition:all .15s;line-height:1.3}
   .qo:hover{background:#f1f0eb}
   .qo.correct{background:#d4edda;border-color:#28a745;color:#155724}
   .qo.wrong{background:#f8d7da;border-color:#dc3545;color:#721c24}
   .pr{display:flex;align-items:center;padding:10px 14px;border-radius:8px;border:1px solid #e0dfd8;background:#fff;margin-bottom:8px;gap:10px}
-  .pes{font-weight:600;font-size:15px;flex:1}
-  .psv{font-size:13px;color:#666;flex:1;text-align:right}
-  .cp{font-size:11px;padding:2px 8px;border-radius:6px;white-space:nowrap}
-  .cH{background:#cfe2ff;color:#084298}
-  .cM{background:#d1e7dd;color:#0f5132}
-  .cV{background:#fff3cd;color:#664d03}
-  .cT{background:#e9ecef;color:#495057}
+  .pes{font-weight:600;font-size:14px;flex:1;line-height:1.3}
+  .psv{font-size:13px;color:#666;flex:1;text-align:right;line-height:1.3}
+  .cp{font-size:11px;padding:2px 8px;border-radius:6px;white-space:nowrap;flex-shrink:0}
+  .cH{background:#cfe2ff;color:#084298}.cM{background:#d1e7dd;color:#0f5132}
+  .cV{background:#fff3cd;color:#664d03}.cT{background:#e9ecef;color:#495057}
+  .cR{background:#f8d7da;color:#721c24}.cRe{background:#e2d9f3;color:#432874}
+  .cP{background:#fde8d8;color:#7c3c00}.cN{background:#d1ecf1;color:#0c5460}
   .qfb{text-align:center;margin-top:1rem;font-size:14px;color:#555;min-height:20px}
   #qres{display:none;text-align:center;padding:2.5rem 0}
   .score-big{font-size:36px;font-weight:700;margin-bottom:8px}
+  .cat-section{margin-bottom:1.5rem}
+  .cat-header{font-size:13px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;padding-left:2px}
+
+  /* Översättning */
+  .trans-box{background:#fff;border-radius:12px;border:1px solid #e0dfd8;padding:16px;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,0.05)}
+  .trans-label{font-size:12px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+  .trans-box textarea{width:100%;border:1px solid #d0cfc8;border-radius:8px;padding:10px 12px;font-size:15px;font-family:inherit;resize:vertical;min-height:90px;background:#f9f9f7;line-height:1.5}
+  .trans-box textarea:focus{outline:2px solid #378ADD;border-color:transparent}
+  .trans-result{font-size:18px;font-weight:500;color:#185FA5;line-height:1.5;min-height:40px;padding:4px 0}
+  .trans-loading{font-size:14px;color:#888;font-style:italic}
 </style>
 </head>
 <body>
 <h1>Lär dig spanska 🇪🇸</h1>
-<p class="sub">Med riktigt naturlig röst via ElevenLabs</p>
+<p class="sub">Med naturlig röst via ElevenLabs</p>
 
 <div class="api-box">
   <div class="api-row">
-    <input type="password" id="api-key" placeholder="Klistra in din ElevenLabs API-nyckel..." autocomplete="off">
-    <button class="btn" onclick="connect()">&#128279; Anslut</button>
+    <input type="password" id="api-key" placeholder="ElevenLabs API-nyckel..." autocomplete="off">
+    <button class="btn" onclick="connect()">🔌 Anslut</button>
+    <button class="btn" onclick="clearKey()" title="Glöm sparad nyckel" style="padding:9px 12px">🗑</button>
   </div>
   <div class="log" id="log">Väntar på API-nyckel...</div>
   <div class="voice-row" id="voice-row">
@@ -83,20 +95,26 @@
   <button class="tab active" onclick="switchTab('fc',this)">Flash cards</button>
   <button class="tab" onclick="switchTab('quiz',this)">Quiz</button>
   <button class="tab" onclick="switchTab('fraser',this)">Fraser</button>
+  <button class="tab" onclick="switchTab('oversatt',this)">Översätt</button>
 </div>
 
+<!-- FLASH CARDS -->
 <div class="section active" id="section-fc">
   <div class="filter-row">
     <select id="fcat" onchange="filterCards()">
       <option value="all">Alla kategorier</option>
       <option value="H">Hälsningar</option>
-      <option value="M">Mat &amp; dryck</option>
+      <option value="M">Mat &amp; restaurang</option>
       <option value="V">Vardagsfraser</option>
       <option value="T">Tal &amp; siffror</option>
+      <option value="R">Resa &amp; hotell</option>
+      <option value="Re">Hitta vägen</option>
+      <option value="P">Presentera sig</option>
+      <option value="N">Nödsituationer</option>
     </select>
   </div>
-  <div class="pw"><div class="pb" id="fcb" style="width:3%"></div></div>
-  <div class="pl" id="fcp">1 / 32</div>
+  <div class="pw"><div class="pb" id="fcb" style="width:1%"></div></div>
+  <div class="pl" id="fcp">1 / 1</div>
   <div class="flashcard" onclick="flipCard()">
     <div class="fc-es" id="fcw"></div>
     <div class="fc-hint" id="fch">Tryck för att se översättning</div>
@@ -115,13 +133,14 @@
   </div>
 </div>
 
+<!-- QUIZ -->
 <div class="section" id="section-quiz">
   <div id="qarea">
     <div class="pw"><div class="pb" id="qb" style="width:0%"></div></div>
     <div class="pl" id="qp">Fråga 1 / 10</div>
     <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin:1rem 0 0.25rem">
       <div class="qq" id="qw"></div>
-      <button class="btn audio" id="qab" onclick="speakQuiz()" style="padding:7px 12px">🔊</button>
+      <button class="btn audio" id="qab" onclick="speakQuiz()" style="padding:7px 12px;flex-shrink:0">🔊</button>
     </div>
     <div class="qg" id="qopts"></div>
     <div class="qfb" id="qfb"></div>
@@ -133,30 +152,75 @@
   </div>
 </div>
 
+<!-- FRASER -->
 <div class="section" id="section-fraser">
   <div class="tabs" style="margin-bottom:1rem">
     <button class="tab active" onclick="showF('all',this)">Alla</button>
-    <button class="tab" onclick="showF('H',this)">Hälsningar</button>
+    <button class="tab" onclick="showF('H',this)">Hälsning</button>
     <button class="tab" onclick="showF('M',this)">Mat</button>
     <button class="tab" onclick="showF('V',this)">Vardag</button>
-    <button class="tab" onclick="showF('T',this)">Tal</button>
+    <button class="tab" onclick="showF('R',this)">Resa</button>
+    <button class="tab" onclick="showF('Re',this)">Vägen</button>
+    <button class="tab" onclick="showF('P',this)">Presentera</button>
+    <button class="tab" onclick="showF('N',this)">Nöd</button>
   </div>
   <div id="flist"></div>
 </div>
 
+<!-- ÖVERSÄTT -->
+<div class="section" id="section-oversatt">
+  <div class="trans-box">
+    <div class="trans-label">Skriv på svenska</div>
+    <textarea id="sv-input" placeholder="T.ex. Var är närmaste apotek?"></textarea>
+    <div class="btn-row" style="margin-top:10px;justify-content:flex-start">
+      <button class="btn primary" onclick="translate()">🌍 Översätt till spanska</button>
+    </div>
+  </div>
+  <div class="trans-box" id="trans-result-box" style="display:none">
+    <div class="trans-label">På spanska</div>
+    <div class="trans-result" id="trans-result"></div>
+    <div class="btn-row" style="margin-top:12px;justify-content:flex-start">
+      <button class="btn audio" id="trans-speak-btn" onclick="speakTranslation()">🔊 Lyssna</button>
+      <button class="btn" onclick="copyTranslation()">📋 Kopiera</button>
+    </div>
+  </div>
+</div>
+
 <script>
 const vocab=[
-  {es:"Hola",sv:"Hej",cat:"H"},{es:"Buenos días",sv:"God morgon",cat:"H"},{es:"Buenas tardes",sv:"God eftermiddag",cat:"H"},{es:"Buenas noches",sv:"God natt",cat:"H"},{es:"¿Cómo estás?",sv:"Hur mår du?",cat:"H"},{es:"Bien, gracias",sv:"Bra, tack",cat:"H"},{es:"Mucho gusto",sv:"Trevligt att träffas",cat:"H"},{es:"Adiós",sv:"Hejdå",cat:"H"},
-  {es:"El agua",sv:"Vattnet",cat:"M"},{es:"El pan",sv:"Brödet",cat:"M"},{es:"La leche",sv:"Mjölken",cat:"M"},{es:"El café",sv:"Kaffet",cat:"M"},{es:"La cerveza",sv:"Ölet",cat:"M"},{es:"La comida",sv:"Maten",cat:"M"},{es:"La fruta",sv:"Frukten",cat:"M"},{es:"El vino",sv:"Vinet",cat:"M"},
-  {es:"Por favor",sv:"Snälla / Tack",cat:"V"},{es:"Gracias",sv:"Tack",cat:"V"},{es:"De nada",sv:"Varsågod",cat:"V"},{es:"Lo siento",sv:"Förlåt",cat:"V"},{es:"No entiendo",sv:"Jag förstår inte",cat:"V"},{es:"¿Hablas inglés?",sv:"Talar du engelska?",cat:"V"},{es:"¿Cuánto cuesta?",sv:"Hur mycket kostar det?",cat:"V"},{es:"Necesito ayuda",sv:"Jag behöver hjälp",cat:"V"},
-  {es:"Uno",sv:"Ett",cat:"T"},{es:"Dos",sv:"Två",cat:"T"},{es:"Tres",sv:"Tre",cat:"T"},{es:"Cuatro",sv:"Fyra",cat:"T"},{es:"Cinco",sv:"Fem",cat:"T"},{es:"Diez",sv:"Tio",cat:"T"},{es:"Veinte",sv:"Tjugo",cat:"T"},{es:"Cien",sv:"Hundra",cat:"T"}
+  {es:"Hola",sv:"Hej",cat:"H"},{es:"Buenos días",sv:"God morgon",cat:"H"},{es:"Buenas tardes",sv:"God eftermiddag",cat:"H"},{es:"Buenas noches",sv:"God natt",cat:"H"},{es:"¿Cómo estás?",sv:"Hur mår du?",cat:"H"},{es:"Bien, gracias. ¿Y tú?",sv:"Bra, tack. Och du?",cat:"H"},{es:"Mucho gusto",sv:"Trevligt att träffas",cat:"H"},{es:"Adiós, hasta luego",sv:"Hejdå, vi ses",cat:"H"},
+  {es:"Una mesa para dos, por favor",sv:"Ett bord för två, tack",cat:"M"},{es:"¿Qué recomienda usted?",sv:"Vad rekommenderar ni?",cat:"M"},{es:"Quisiera ver la carta, por favor",sv:"Jag skulle vilja se menyn, tack",cat:"M"},{es:"Para mí, el pollo con ensalada",sv:"För mig, kycklingen med sallad",cat:"M"},{es:"La cuenta, por favor",sv:"Notan, tack",cat:"M"},{es:"¿Está incluido el servicio?",sv:"Är dricks inkluderat?",cat:"M"},{es:"Soy alérgico al gluten",sv:"Jag är allergisk mot gluten",cat:"M"},{es:"Está muy rico",sv:"Det är väldigt gott",cat:"M"},
+  {es:"Por favor",sv:"Snälla / Tack",cat:"V"},{es:"Gracias",sv:"Tack",cat:"V"},{es:"De nada",sv:"Varsågod",cat:"V"},{es:"Lo siento mucho",sv:"Det är jag mycket ledsen för",cat:"V"},{es:"No entiendo, ¿puede repetir?",sv:"Jag förstår inte, kan du upprepa?",cat:"V"},{es:"¿Habla usted inglés?",sv:"Talar du engelska?",cat:"V"},{es:"¿Cuánto cuesta esto?",sv:"Hur mycket kostar det här?",cat:"V"},{es:"Necesito ayuda, por favor",sv:"Jag behöver hjälp, tack",cat:"V"},{es:"¿Puede hablar más despacio?",sv:"Kan du tala lite långsammare?",cat:"V"},{es:"No hablo español muy bien",sv:"Jag talar inte spanska så bra",cat:"V"},
+  {es:"Uno, dos, tres",sv:"Ett, två, tre",cat:"T"},{es:"Cuatro, cinco, seis",sv:"Fyra, fem, sex",cat:"T"},{es:"Siete, ocho, nueve, diez",sv:"Sju, åtta, nio, tio",cat:"T"},{es:"Veinte",sv:"Tjugo",cat:"T"},{es:"Cincuenta",sv:"Femtio",cat:"T"},{es:"Cien",sv:"Hundra",cat:"T"},
+  {es:"Tengo una reserva a nombre de...",sv:"Jag har en bokning i namnet...",cat:"R"},{es:"¿A qué hora es el desayuno?",sv:"Vilken tid serveras frukost?",cat:"R"},{es:"Quisiera una habitación doble",sv:"Jag skulle vilja ha ett dubbelrum",cat:"R"},{es:"¿Dónde está el aeropuerto?",sv:"Var ligger flygplatsen?",cat:"R"},{es:"Un billete de ida y vuelta, por favor",sv:"En tur- och returbiljett, tack",cat:"R"},{es:"¿A qué hora sale el tren?",sv:"Vilken tid går tåget?",cat:"R"},{es:"Quiero alquilar un coche",sv:"Jag vill hyra en bil",cat:"R"},{es:"¿Hay wifi en el hotel?",sv:"Finns det wifi på hotellet?",cat:"R"},
+  {es:"¿Dónde está el baño?",sv:"Var är toaletten?",cat:"Re"},{es:"¿Cómo llego al centro?",sv:"Hur kommer jag till centrum?",cat:"Re"},{es:"Gire a la derecha",sv:"Sväng till höger",cat:"Re"},{es:"Gire a la izquierda",sv:"Sväng till vänster",cat:"Re"},{es:"Siga todo recto",sv:"Fortsätt rakt fram",cat:"Re"},{es:"Está a dos minutos a pie",sv:"Det är två minuter till fots",cat:"Re"},{es:"¿Hay una farmacia cerca?",sv:"Finns det ett apotek i närheten?",cat:"Re"},{es:"Estoy perdido",sv:"Jag har gått vilse",cat:"Re"},
+  {es:"Me llamo...",sv:"Jag heter...",cat:"P"},{es:"Soy de Suecia",sv:"Jag är från Sverige",cat:"P"},{es:"Tengo treinta años",sv:"Jag är trettio år gammal",cat:"P"},{es:"Trabajo como...",sv:"Jag jobbar som...",cat:"P"},{es:"Estoy aquí de vacaciones",sv:"Jag är här på semester",cat:"P"},{es:"Me gusta mucho España",sv:"Jag tycker mycket om Spanien",cat:"P"},{es:"¿De dónde eres?",sv:"Var kommer du ifrån?",cat:"P"},{es:"¿A qué te dedicas?",sv:"Vad jobbar du med?",cat:"P"},
+  {es:"¡Llame a la policía!",sv:"Ring polisen!",cat:"N"},{es:"¡Necesito un médico!",sv:"Jag behöver en läkare!",cat:"N"},{es:"¡Llame a una ambulancia!",sv:"Ring en ambulans!",cat:"N"},{es:"Me han robado la cartera",sv:"Min plånbok har blivit stulen",cat:"N"},{es:"Estoy enfermo",sv:"Jag är sjuk",cat:"N"},{es:"Me duele mucho aquí",sv:"Det gör mycket ont här",cat:"N"},{es:"¿Dónde está el hospital?",sv:"Var är sjukhuset?",cat:"N"},{es:"¡Fuego!",sv:"Brand!",cat:"N"},
 ];
-const catName={H:"Hälsning",M:"Mat",V:"Vardag",T:"Tal"};
+const catName={H:"Hälsning",M:"Mat",V:"Vardag",T:"Tal",R:"Resa",Re:"Vägen",P:"Presentera",N:"Nöd"};
 
 let filtered=[...vocab],fcIdx=0,fcFlipped=false;
 let qWords=[],qIdx=0,qScore=0,qAnswered=false,qCurrent=null;
 let apiKey='',voices=[],selVoice='';
 const cache={};
+let lastTranslation='';
+
+// Spara/ladda API-nyckel
+function loadSavedKey(){
+  const saved=localStorage.getItem('el_api_key');
+  if(saved){
+    document.getElementById('api-key').value=saved;
+    connect();
+  }
+}
+
+function clearKey(){
+  localStorage.removeItem('el_api_key');
+  document.getElementById('api-key').value='';
+  apiKey='';
+  document.getElementById('voice-row').style.display='none';
+  setLog('Nyckel borttagen.','');
+}
 
 document.getElementById('spd').oninput=function(){
   document.getElementById('spdv').textContent=parseFloat(this.value).toFixed(1)+'×';
@@ -171,25 +235,21 @@ function setLog(msg,type){
 async function connect(){
   apiKey=(document.getElementById('api-key').value||'').trim();
   if(!apiKey){setLog('Klistra in nyckeln först!','err');return;}
-  setLog('Ansluter till ElevenLabs...','spin');
+  setLog('Ansluter...','spin');
   try{
-    const r=await fetch('https://api.elevenlabs.io/v1/voices',{
-      headers:{'xi-api-key':apiKey}
-    });
-    if(!r.ok){
-      const t=await r.text();
-      setLog('Fel HTTP '+r.status+': '+t.slice(0,120),'err');
-      return;
-    }
+    const r=await fetch('https://api.elevenlabs.io/v1/voices',{headers:{'xi-api-key':apiKey}});
+    if(!r.ok){const t=await r.text();setLog('Fel HTTP '+r.status+': '+t.slice(0,120),'err');return;}
     const d=await r.json();
     voices=d.voices||[];
-    if(!voices.length){setLog('Inga röster hittades på kontot','err');return;}
+    if(!voices.length){setLog('Inga röster hittades','err');return;}
+    // Spara nyckeln
+    localStorage.setItem('el_api_key',apiKey);
     const sel=document.getElementById('vsel');
     sel.innerHTML='';
     const sorted=[...voices].sort((a,b)=>{
       const al=(a.labels&&a.labels.language||'').toLowerCase();
       const bl=(b.labels&&b.labels.language||'').toLowerCase();
-      return (al.includes('spanish')||al.includes('espanol'))?-1:(bl.includes('spanish')||bl.includes('espanol'))?1:0;
+      return(al.includes('spanish')||al.includes('espanol'))?-1:(bl.includes('spanish')||bl.includes('espanol'))?1:0;
     });
     sorted.forEach(v=>{
       const o=document.createElement('option');
@@ -200,10 +260,8 @@ async function connect(){
     selVoice=sorted[0].voice_id;
     sel.onchange=()=>{selVoice=sel.value;Object.keys(cache).forEach(k=>delete cache[k]);};
     document.getElementById('voice-row').style.display='flex';
-    setLog('✓ Ansluten! '+voices.length+' röster hittade.','ok');
-  }catch(e){
-    setLog('Nätverksfel: '+e.message,'err');
-  }
+    setLog('✓ Ansluten! Nyckel sparad – behöver inte skrivas in igen.','ok');
+  }catch(e){setLog('Nätverksfel: '+e.message,'err');}
 }
 
 async function speak(text,btnId){
@@ -217,11 +275,7 @@ async function speak(text,btnId){
       const r=await fetch('https://api.elevenlabs.io/v1/text-to-speech/'+selVoice,{
         method:'POST',
         headers:{'xi-api-key':apiKey,'Content-Type':'application/json','Accept':'audio/mpeg'},
-        body:JSON.stringify({
-          text:text,
-          model_id:'eleven_multilingual_v2',
-          voice_settings:{stability:0.5,similarity_boost:0.75,speed:parseFloat(document.getElementById('spd').value)}
-        })
+        body:JSON.stringify({text,model_id:'eleven_multilingual_v2',voice_settings:{stability:0.5,similarity_boost:0.75,speed:parseFloat(document.getElementById('spd').value)}})
       });
       if(!r.ok){const e=await r.text();setLog('TTS-fel '+r.status+': '+e.slice(0,80),'err');if(btn){btn.disabled=false;btn.classList.remove('playing');}return;}
       url=URL.createObjectURL(await r.blob());
@@ -231,15 +285,54 @@ async function speak(text,btnId){
     a.onended=()=>{if(btn){btn.disabled=false;btn.classList.remove('playing');}};
     a.onerror=()=>{if(btn){btn.disabled=false;btn.classList.remove('playing');}};
     a.play();
-  }catch(e){
-    setLog('Fel: '+e.message,'err');
-    if(btn){btn.disabled=false;btn.classList.remove('playing');}
-  }
+  }catch(e){setLog('Fel: '+e.message,'err');if(btn){btn.disabled=false;btn.classList.remove('playing');}}
 }
 
 function speakCurrent(){speak(filtered[fcIdx].es,'fcab');}
 function speakQuiz(){if(qCurrent)speak(qCurrent.es,'qab');}
+function speakTranslation(){if(lastTranslation)speak(lastTranslation,'trans-speak-btn');}
 
+function copyTranslation(){
+  if(!lastTranslation)return;
+  navigator.clipboard.writeText(lastTranslation).then(()=>{
+    const b=document.getElementById('trans-speak-btn').parentNode.querySelector('[onclick="copyTranslation()"]');
+    if(b){const old=b.textContent;b.textContent='✓ Kopierad!';setTimeout(()=>b.textContent=old,1500);}
+  });
+}
+
+// Översättning via Claude API
+async function translate(){
+  const text=(document.getElementById('sv-input').value||'').trim();
+  if(!text)return;
+  const resBox=document.getElementById('trans-result-box');
+  const resEl=document.getElementById('trans-result');
+  resBox.style.display='block';
+  resEl.innerHTML='<span class="trans-loading">Översätter...</span>';
+  lastTranslation='';
+  try{
+    const r=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        model:'claude-sonnet-4-20250514',
+        max_tokens:500,
+        messages:[{role:'user',content:'Översätt följande text från svenska till spanska. Svara BARA med den spanska översättningen, inget annat, ingen förklaring:\n\n'+text}]
+      })
+    });
+    const d=await r.json();
+    const translated=(d.content&&d.content[0]&&d.content[0].text)||'';
+    if(translated){
+      lastTranslation=translated;
+      resEl.textContent=translated;
+    } else {
+      resEl.innerHTML='<span style="color:#721c24">Kunde inte översätta. Försök igen.</span>';
+    }
+  }catch(e){
+    resEl.innerHTML='<span style="color:#721c24">Fel: '+e.message+'</span>';
+  }
+}
+
+// Flash cards
 function renderCard(){
   const v=filtered[fcIdx];
   document.getElementById('fcw').textContent=v.es;
@@ -274,6 +367,7 @@ function nextCard(){fcIdx=(fcIdx+1)%filtered.length;renderCard();}
 function prevCard(){fcIdx=(fcIdx-1+filtered.length)%filtered.length;renderCard();}
 function shuffle(a){return [...a].sort(()=>Math.random()-.5);}
 
+// Quiz
 function startQuiz(){
   qWords=shuffle(vocab).slice(0,10);qIdx=0;qScore=0;qAnswered=false;
   document.getElementById('qarea').style.display='block';
@@ -303,7 +397,7 @@ function answerQ(chosen,correct,btn){
   document.querySelectorAll('.qo').forEach(b=>{if(b.textContent===correct)b.classList.add('correct');});
   if(chosen===correct){qScore++;document.getElementById('qfb').textContent='✓ Rätt!';}
   else{btn.classList.add('wrong');document.getElementById('qfb').textContent='✗ Rätt svar: '+correct;}
-  setTimeout(()=>{qIdx++;renderQuiz();},1300);
+  setTimeout(()=>{qIdx++;renderQuiz();},1400);
 }
 
 function showQRes(){
@@ -314,30 +408,45 @@ function showQRes(){
   document.getElementById('qmsg').textContent=p>=80?'Utmärkt! Du kan spanska 💪':p>=50?'Bra jobbat! Fortsätt öva 👍':'Öva mer och försök igen!';
 }
 
+// Fraser
 function showF(cat,btn){
   document.querySelectorAll('#section-fraser .tabs .tab').forEach(b=>b.classList.remove('active'));
   if(btn)btn.classList.add('active');
   const list=document.getElementById('flist');list.innerHTML='';
-  (cat==='all'?vocab:vocab.filter(v=>v.cat===cat)).forEach((v,i)=>{
-    const id='sb'+i;
-    const row=document.createElement('div');row.className='pr';
-    row.innerHTML=`<span class="pes">${v.es}</span><span class="psv">${v.sv}</span><span class="cp c${v.cat}">${catName[v.cat]}</span><button id="${id}" class="btn audio" style="padding:5px 10px;flex-shrink:0">🔊</button>`;
-    list.appendChild(row);
-    row.querySelector('#'+id).onclick=()=>speak(v.es,id);
-  });
+  if(cat==='all'){
+    ['H','M','V','T','R','Re','P','N'].forEach(c=>{
+      const sec=document.createElement('div');sec.className='cat-section';
+      const hdr=document.createElement('div');hdr.className='cat-header';hdr.textContent=catName[c];
+      sec.appendChild(hdr);
+      vocab.filter(v=>v.cat===c).forEach((v,i)=>sec.appendChild(makeRow(v,c+i)));
+      list.appendChild(sec);
+    });
+  } else {
+    vocab.filter(v=>v.cat===cat).forEach((v,i)=>list.appendChild(makeRow(v,cat+i)));
+  }
+}
+
+function makeRow(v,id){
+  const speakId='sb'+id;
+  const row=document.createElement('div');row.className='pr';
+  row.innerHTML=`<span class="pes">${v.es}</span><span class="psv">${v.sv}</span><span class="cp c${v.cat}">${catName[v.cat]}</span><button id="${speakId}" class="btn audio" style="padding:5px 10px;flex-shrink:0">🔊</button>`;
+  row.querySelector('#'+speakId).onclick=()=>speak(v.es,speakId);
+  return row;
 }
 
 function switchTab(id,el){
-  document.querySelectorAll('body > .tabs .tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('body>.tabs .tab').forEach(t=>t.classList.remove('active'));
   if(el)el.classList.add('active');
   document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
   document.getElementById('section-'+id).classList.add('active');
   if(id==='quiz')startQuiz();
 }
 
+// Starta
 renderCard();
 showF('all',null);
 startQuiz();
+loadSavedKey();
 </script>
 </body>
 </html>
